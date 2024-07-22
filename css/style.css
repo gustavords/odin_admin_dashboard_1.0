@@ -138,6 +138,14 @@ header {
         & span {
             margin: 0rem 1rem;
             align-self: center;
+            background-image: url(../images/me.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: 1px black solid;
         }
 
         & .usrnm_display {
@@ -180,8 +188,6 @@ header {
         }
     }
 }
-
-
 
 header>* * {
     /* outline: 1px greenyellow solid; */
@@ -227,14 +233,24 @@ main {
                 margin-top: 1rem;
                 display: inherit;
                 align-self: flex-end;
+                justify-content: center;
+                align-items: end;
+                gap: 1rem;
 
                 & li {
                     list-style: none;
-                    margin-left: 1rem;
 
                     & a {
                         text-decoration: none;
                         color: green;
+                    }
+                    & a:hover {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    & a:active {
+                        text-decoration: none;
+                        color: red;
                     }
                 }
             }
