@@ -37,9 +37,6 @@ body {
         gap: .2rem;
     }
 
-    & .sys-nav,
-    .user-nav {}
-
     & .user-nav>menu li,
     .sys-nav>menu li {
         list-style: none;
@@ -63,16 +60,6 @@ body {
     }
 }
 
-
-
-
-
-.side-panel>.user-nav {}
-
-
-.side-panel>.sys-nav {}
-
-
 header {
     grid-area: 1/2/2/-1;
 
@@ -91,20 +78,27 @@ header {
 
 
         & .search_lbl {
-            /* padding: 1rem 0rem; */
+            align-self: center;
             display: inherit;
             gap: 1rem;
             flex: 1;
             margin-left: 1rem;
-        }
 
-        & #search_bar {
-            flex: .75;
-            appearance: none;
-            background-color: lightgray;
-            border: 0px;
-        }
+            & label {
+                display: flex;
 
+                & span {
+                    align-self: center;
+                }
+            }
+
+            & #search_bar {
+                flex: .75;
+                appearance: none;
+                background-color: lightgray;
+                border: 0px;
+            }
+        }
 
         & .alert-btn {
             text-decoration: none;
@@ -114,8 +108,28 @@ header {
         & .user_profile {
             display: inherit;
             text-decoration: none;
+            align-items: center;
             margin-right: 1rem;
             gap: 1rem;
+
+            & span {
+                background-image: url(../images/me.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 3rem;
+                height: 3rem;
+                border-radius:50% ;
+                border: 1px black solid;
+
+
+/*                 
+                object-fit: contain;
+                height: 100px;
+                width: 100px; */
+
+
+            }
 
             & p {
                 flex: 1;
