@@ -4,6 +4,15 @@
     margin: 0%;
 }
 
+@font-face {
+    font-family: "lilita";
+    src: url("../fonts/lilitaone-regular-webfont.woff2") format("woff2"),
+        url("../fonts/lilitaone-regular-webfont.woff") format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --darkgreen-color: #435C5F;
     --green-1-color: #82a1a5;
@@ -76,6 +85,7 @@ body {
         display: flex;
         align-items: center;
         gap: .2rem;
+        font-family: "lilita";
 
         & span {
             font-size: xx-large;
@@ -86,6 +96,9 @@ body {
     .sys-nav>menu li {
         list-style: none;
         padding: .5rem 1rem;
+        font-family: "lilita";
+        letter-spacing: .1rem;
+
 
         & a {
             display: flex;
@@ -120,6 +133,7 @@ header {
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
     align-items: center;
+    font-family: "roboto";
 
     & .menu-top {
         display: flex;
@@ -143,11 +157,11 @@ header {
                     color: var(--font-1-color);
                 }
 
-                & span:hover{
+                & span:hover {
                     color: var(--hover-2-color);
                 }
 
-                & span:active{
+                & span:active {
                     color: var(--active-2-color);
                 }
             }
@@ -160,7 +174,7 @@ header {
                 border-radius: .25rem;
             }
 
-            & #search_bar:focus{
+            & #search_bar:focus {
                 appearance: none;
                 outline: 3px var(--blue-1-color) solid;
                 /* border: 0px; */
@@ -233,11 +247,20 @@ header {
 
             & p {
                 color: var(--font-1-color);
+                font-family: "lilita";
+                font-style: oblique;
+            }
+
+            & h2 {
+                font-family: "lilita";
+                letter-spacing: .15rem;
+
             }
 
             & a {
                 text-decoration: none;
                 color: var(--font-1-color);
+
             }
 
             & a:hover {
@@ -271,11 +294,11 @@ header {
                     letter-spacing: .1rem;
                 }
 
-                & button:hover{
+                & button:hover {
                     background-color: var(--hover-2-color);
                 }
 
-                & button:active{
+                & button:active {
                     outline: 1px var(--font-1-color) solid;
                     color: var(--active-2-color);
                 }
@@ -293,6 +316,10 @@ main {
 
     & h3 {
         margin: 1rem 0rem 0rem 1rem;
+        font-family: "lilita";
+        font-weight: 200;
+        font-style: oblique;
+        letter-spacing: .15rem;
     }
 
     & .projects {
@@ -304,12 +331,19 @@ main {
         & .card {
             display: flex;
             flex-direction: column;
-            /* outline: 1px solid purple; */
             padding: .5rem;
             border-radius: .4em;
-            border: none;
+            border-left: 4px var(--blue-1-color) solid;
+            font-family: "roboto";
+
+            & h4 {
+                margin-bottom: .2rem;
+                letter-spacing: .09rem;
+
+            }
 
             & p {
+                line-height: 1.2rem;
                 display: -webkit-box;
                 overflow: hidden;
                 -webkit-line-clamp: 5;
@@ -360,6 +394,13 @@ main {
     flex-direction: column;
     gap: .5rem;
 
+    & h3 {
+        font-family: "lilita";
+        font-weight: 200;
+        font-style: oblique;
+        letter-spacing: .15rem;
+    }
+
     & .announcement-list {
         display: inherit;
         flex-direction: column;
@@ -367,6 +408,7 @@ main {
         border-radius: .3rem;
         border: none;
         padding: .5rem;
+        font-family: "roboto";
 
         & li {
             flex: 1 0 0;
@@ -405,6 +447,13 @@ main {
     gap: .5rem;
     height: 100%;
 
+    & h3 {
+        font-family: "lilita";
+        font-weight: 200;
+        font-style: oblique;
+        letter-spacing: .15rem;
+    }
+
     & .trending-list {
         padding: 1rem;
         flex: 1;
@@ -414,7 +463,7 @@ main {
         gap: .5rem;
         border: none;
         border-radius: .3rem;
-
+        font-family: "roboto";
 
         & li {
             list-style: none;
@@ -453,7 +502,8 @@ main {
 
             }
         }
-        & li:hover{
+
+        & li:hover {
             outline: 1px var(--lightgreen-color) solid;
         }
 
